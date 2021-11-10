@@ -18,6 +18,10 @@ app.get("/works", (req, res) => {
   res.sendFile(__dirname + "/public/views/works.html");
 });
 
+app.get("/gallery", (req, res) => {
+  res.sendFile(__dirname + "/public/views/gallery.html");
+});
+
 // Route not found (404)
 app.use(function (req, res) {
   res.status(404).send(req.url + " not found.");
